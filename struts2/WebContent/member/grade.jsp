@@ -4,7 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
   
      <h1>sadasdsadasdsadsakjdslakdjaslkdjsalkdjsalkdjsaldkjsaldkjsadlkasjdlkj</h1>
-    
+     <h2>dasdsadsadasdsadsadsadsadsad</h2>
     
     <h1>이수구분<h1>${dto.ssection}</br>
      <font>과목코드</font>${dto.gnumber}<br>
