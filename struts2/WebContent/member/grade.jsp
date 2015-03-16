@@ -2,12 +2,8 @@
     pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
  <h1> 학생성적조회 </h1>
- 
-  
-  
-  <c:if test="${sessionScope.memId !=null }">
- 
-      <style>
+ <c:if test="${sessionScope.memId !=null }">
+  <style>
       table {
         width: 190%;
         height:10%;
