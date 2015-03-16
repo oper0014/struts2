@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
  <h1> 학생성적조회 </h1>
  
- <h1>테스트 맥북에서 해보는 git 업데이트 </h1>
+ 
    <c:if test="${sessionScope.memId !=null }"> 
    
     <font>이수구분: </font>${dto.ssection}<br>
