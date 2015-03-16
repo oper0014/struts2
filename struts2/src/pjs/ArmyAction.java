@@ -14,8 +14,8 @@ import com.opensymphony.xwork2.ModelDriven;
 import com.opensymphony.xwork2.Preparable;
 
 /*
- * ¼­µ¿¿ì ´ã´ç
- * 5¹ø ¿¹ºñ±ºÆíÀÔ½Å°í¼­(³²ÀÚ¸¸)
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+ * 5ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½Å°ï¿½(ï¿½ï¿½ï¿½Ú¸ï¿½)
  * */
 public class ArmyAction implements Preparable,SessionAware,ModelDriven,SuperIbatis{
 	private SqlMapClient sqlMapper;
@@ -23,17 +23,11 @@ public class ArmyAction implements Preparable,SessionAware,ModelDriven,SuperIbat
 	private ArmyDTO dto2=null;
 	private Map sessionMap=null;
 	public String execute(){	
-		String id=(String) sessionMap.get("memId");//¼¼¼Ç¿¡¼­ id °¡Á®¿È
-		System.out.println("±º ÀÔ¿µ¿¡¼­ »õ¼Ç ¾ÆÀÌµğ:"+id);
-		//°³ÀÎÁ¤º¸ Á¶È¸
-		/*
+		String id=(String) sessionMap.get("memId");//ì„¸ì…˜ Strubg  ê°’
+		System.out.println(" ì•„ì´ë”” ì„¸ì…˜ :"+id);
+	
 		try {
-			dto = (MemberDTO) sqlMapper.queryForObject("test.selectTuition", id);
-			System.out.println("dto.getId():"+dto.getId()+"grade:"+dto.getGrade());
-		} catch (SQLException e) {e.printStackTrace();}
-		*/
-		try {
-			dto2 = (ArmyDTO) sqlMapper.queryForObject("test.selectArmy", id);//±ºÀÔ¿µ Å×ÀÌºí¿¡¼­ ¼¼¼Ç id·Î dto¹Ş¾Æ¿È
+			dto2 = (ArmyDTO) sqlMapper.queryForObject("test.selectArmy", id);// sqlì¿¼ë¦¬ ì‚½ì…
 			System.out.println("dto2.getId():"+dto.getId()+"getJoin:"+dto2.getJoin());
 		} catch (Exception e) {e.printStackTrace();}
 		
