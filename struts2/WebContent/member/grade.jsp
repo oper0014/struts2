@@ -5,6 +5,8 @@
    <c:if test="${sessionScope.memId !=null }"> 
        <h1>test git updae</h1>
        <h2>test update good?</h2>
+       
+       <h1>맥북으로 이클립스 git 업데이트 </h1>
     <font>이수구분: </font>${dto.ssection}<br>
     <font>과목코드: </font>${dto.gnumber}<br>
      <font>과목: </font>${dto.sname }<br>
