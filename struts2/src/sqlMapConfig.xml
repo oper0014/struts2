@@ -23,4 +23,5 @@
 	<sqlMap resource="/sql/testSQL.xml" />
 	<sqlMap resource="/sql/yhSQL.xml" />
 	<sqlMap resource="/sql/scheduleSQL.xml"/>
+	<sqlMap resource="/sql/gradeSQL.xml"/>
 </sqlMapConfig>

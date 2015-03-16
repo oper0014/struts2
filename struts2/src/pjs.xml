@@ -17,6 +17,10 @@
 			<result>/member/stduentinfo.jsp</result>
 		</action>
 		<action name="grade" class="pjs.GradeAction">
+		  <interceptor-ref name="prepare" />
+			<interceptor-ref name="modelDriven" />
+			<interceptor-ref name="params" />
+			<interceptor-ref name="ibatis" />
 			<result>/member/grade.jsp</result>
 		</action>
 		<action name="army" class="pjs.ArmyAction">

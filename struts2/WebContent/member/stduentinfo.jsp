@@ -49,7 +49,7 @@
     
     <tr> 
       <td width="200">¼ºº°</td>
-      <td width="400">${dto.gender }</td>
+      <td width="400">${dto.gender}</td>
         </tr>
     
     
