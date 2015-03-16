@@ -13,10 +13,7 @@ import com.ibatis.sqlmap.client.SqlMapClient;
 import com.opensymphony.xwork2.ModelDriven;
 import com.opensymphony.xwork2.Preparable;
 
-/*
- * ������ ���
- * 5�� �������ԽŰ�(���ڸ�)
- * */
+
 public class ArmyAction implements Preparable,SessionAware,ModelDriven,SuperIbatis{
 	private SqlMapClient sqlMapper;
 	private MemberDTO dto=null;
