@@ -117,8 +117,6 @@
 		 <select id ="info_goback" resultMap = "dtoRes" parameterClass="String">
 		select * from student where id=#id# 
 	</select>
-	
-	
 	<update id="goback_submit" parameterClass = "String">
    		update student set state = 
    		case

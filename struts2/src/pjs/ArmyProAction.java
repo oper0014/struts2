@@ -11,9 +11,7 @@ import com.ibatis.sqlmap.client.SqlMapClient;
 import com.opensymphony.xwork2.ModelDriven;
 import com.opensymphony.xwork2.Preparable;
 
-/*
- * ¼­µ¿¿ì
- * ±º ÀÔ¿µ Ã³¸®*/
+/*ì•„ë¯¸ dto  */
 public class ArmyProAction implements Preparable,SessionAware,ModelDriven,SuperIbatis{
 	private ArmyDTO dto=null;
 	private SqlMapClient sqlMapper;
@@ -21,9 +19,9 @@ public class ArmyProAction implements Preparable,SessionAware,ModelDriven,SuperI
 	public String execute() throws Exception{
 		System.out.println("dto.getArmynumber:"+dto.getArmynumber());
 		String id=(String) sessionMap.get("memId");
-		System.out.println("ÀÔ¿µ Ã³¸® »õ¼Ç ¾ÆÀÌµğ:"+id);
+		System.out.println("ì„¸ì…˜ì•„ì´ë””:"+id);
 		dto.setId(id);
-		sqlMapper.insert("test.insertArmy", dto);//Å×ÀÌºí¿¡ ÀÔ·Â
+		sqlMapper.insert("test.insertArmy", dto);//ì‚½ì…í•˜ëŠ” DTO
 		String result ="success";
 		return result;
 	}
@@ -33,7 +31,7 @@ public class ArmyProAction implements Preparable,SessionAware,ModelDriven,SuperI
 	}
 	@Override
 	public void prepare() throws Exception {
-		dto=new ArmyDTO();		//dto¸¦ Á¦¿ÜÇÏ¸é ÁÖÀÔ¹Ş´Â°Íµé
+		dto=new ArmyDTO();		//dtoê°€ëŠ” ê³³
 	}
 	@Override
 	public void setIbatis(SqlMapClient sqlMapper) {

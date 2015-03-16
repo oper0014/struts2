@@ -1,7 +1,7 @@
 package pjs;
-/*¼­µ¿¿ì*/
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/
 public class ArmyFormAction {
-	public String execute(){	/*±ºÀÔ¿µ Ã¢À¸·Î ÀÌµ¿*/			
+	public String execute(){		
 		String result ="success";
 		return result;
 	}

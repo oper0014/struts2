@@ -1,5 +1,5 @@
 package test.databean;
-
+ //majornum  추가됨 
 public class SubjectDTO {
 	private String snumber;
 	private String sname;
