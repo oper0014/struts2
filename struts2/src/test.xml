@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="test" extends="struts-default">
+
+		<interceptors>
+			<!-- <interceptor name="dao" class="test.interceptor.MemberDAOInterceptor"></interceptor> -->
+			<interceptor name="ibatis" class="test.interceptor.IbatisInterceptor" />
+		</interceptors>
+
+		<action name="login" class="test.action.LoginAction">
+			<result>/test/login.jsp</result>
+		</action>
+		<action name="signform" class="test.action.SignformAction">
+			<result>/test/signform.jsp</result>
+		</action>
+		<action name="main" class="test.action.MainAction">
+			<interceptor-ref name="prepare" />
+			<interceptor-ref name="modelDriven" />
+			<interceptor-ref name="params" />
+			<interceptor-ref name="servletConfig" />
+			<interceptor-ref name="ibatis" />
+			<result>/test/main.jsp</result>
+			<result name="login">/test/loginerror.jsp</result>
+		</action>
+		<action name="sign" class="test.action.SignAction">
+			<interceptor-ref name="prepare" />
+			<interceptor-ref name="modelDriven" />
+			<interceptor-ref name="params" />
+			<interceptor-ref name="ibatis" />
+			<result>/test/login.jsp</result>
+		</action>
+		<action name="menu" class="test.action.MenuAction">
+			<result>/test/menu.jsp</result>
+		</action>
+		<action name="logout" class="test.action.LogoutAction">
+			<result>/test/login.jsp</result>
+		</action>
+		<action name="tuition" class="test.action.TuitionAction">
+			<interceptor-ref name="prepare" />
+			<interceptor-ref name="modelDriven" />
+			<interceptor-ref name="params" />
+			<interceptor-ref name="servletConfig" />
+			<interceptor-ref name="ibatis" />
+			<result>/member/tuition.jsp</result>
+		</action>
+		<!-- <action name="main" class="test.action.MainAction"> <interceptor-ref 
+			name="prepare"/> <interceptor-ref name="modelDriven"/> <interceptor-ref name="params"/> 
+			<interceptor-ref name="dao"/> <interceptor-ref name="servletConfig"/> <iterceptor-ref 
+			name="ibatis" /> <result>/test/main.jsp</result> </action> -->
+
+
+	</package>
+
+
+</struts>

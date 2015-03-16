@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="yh">
+	<typeAlias alias="subjectdto2" type="yh.subjectDTO" /><!-- subjectdto를 subjectdto2 로 변경 -->
+		<resultMap id = "subject" class = "subjectdto2">
+			<result property="sub_code" column = "sub_code"/>
+			<result property="sub_name" column = "sub_name"/>
+			<result property="pro_code" column = "pro_code"/>
+			<result property="hakjum" column = "hakjum"/>
+			<result property="class_name" column = "class_name"/>
+		</resultMap>
+
+		<!-- select 쿼리문 정의 -->
+		<select id="selectSub" resultMap="subject" parameterClass="String">
+			SELECT * FROM subject 
+		</select>
+		
+		<select id = "list" resultClass = "subjectdto2" parameterClass="String">
+			select sub_code, sub_name, pro_code from subject where class_name=#computer# order by sub_code ASC
+		</select>
+		
+		<select id = "list2" resultClass = "subjectdto2" parameterClass="String">
+			select sub_code, sub_name from subject where class_name=#computer# order by sub_code ASC
+		</select>
+</sqlMap>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+	"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+ 	
+<sqlMap namespace = "schedule">
+	<typeAlias alias="timedto" type="ogh.TimeDTO" />
+	<resultMap class= "timedto" id = "schoolRes">
+		<result property = "classify" column = "classify"/>
+		<result property = "subject" column = "subject"/>
+		<result property = "professor" column = "professor"/>
+		<result property = "scorecount" column = "scorecount"/>
+		<result property = "subtime" column = "subtime"/>
+		<result property = "subroom" column = "subroom"/>
+		<result property = "subnum" column = "subnum"/>
+		<result property = "major" column = "major"/>
+		<result property = "grade" column = "grade"/>
+	</resultMap>
+	
+	<select id = "selectAll" resultMap = "schoolRes">
+		select* from schedule
+	</select>
+	
+</sqlMap>
+
+
