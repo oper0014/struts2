@@ -4,10 +4,7 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-/*
- * 도예진 담당
- * 8번 수강신청
- * */
+
 public class RequestAction implements SessionAware {
 	private Map sessionMap = null;
  
