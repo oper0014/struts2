@@ -6,6 +6,7 @@
 <form action="/struts2/armyform.action">
 	<!-- armypro에서 신고사항 작성 -->
 	<!-- 업데이트 git -->
+	<!-- git 업데이트 2222 -->
 	<c:if test="${dto2.askdate==null}">
 		<input type="submit" value="신고하기" />
 	</c:if>
