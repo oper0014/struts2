@@ -7,6 +7,14 @@ public class SubjectDTO {
 	private String sclass;
 	private int scredit;
 	private String proid;
+	private int majornum;
+	
+	public int getMajornum() {
+		return majornum;
+	}
+	public void setMajornum(int majornum) {
+		this.majornum = majornum;
+	}
 	public String getSnumber() {
 		return snumber;
 	}

@@ -37,7 +37,7 @@ public class StduentinfoAction implements SessionAware, Preparable,ModelDriven,S
 	}
 	
 	public void prepare() throws Exception {
-		dto=new MemberDTO();		//dto �꽆寃⑥＜�뒗怨�
+		dto=new MemberDTO();		
 	}
 	
 	public void setIbatis(SqlMapClient sqlMapper) {
