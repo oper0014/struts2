@@ -9,8 +9,8 @@
  
       <style>
       table {
-        width: 150%;
-        height:30%;
+        width: 190%;
+        height:10%;
       }
       table, th, td {
         border: 2px solid #bcbcbc;
