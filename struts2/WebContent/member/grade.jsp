@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
- <h1> 학생성적조회 </h1>
+ <h1> 학생성적조회 1학기 </h1>
  <c:if test="${sessionScope.memId !=null }">
   <style>
       table {
